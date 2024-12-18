@@ -22,5 +22,5 @@ export default defineConfig({
       'import.meta.env.NOTION_API_KEY': JSON.stringify(process.env.NOTION_API_KEY),
     },
   },
-  site: 'https://aniradnam.github.io'
+  site: BASE_URL
 });

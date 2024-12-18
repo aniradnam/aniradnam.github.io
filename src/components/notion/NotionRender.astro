@@ -23,6 +23,7 @@ function renderRichText(richText) {
 
 // Función para renderizar cada tipo de bloque
 function renderBlock(block) {
+  console.log(block);
   switch (block.type) {
     case 'divider':
       return `<hr class="my-4"/>`;
@@ -47,6 +48,9 @@ function renderBlock(block) {
 
     case 'child_page':
       return `<div class="p-4 bg-gray-100 rounded mb-4"><strong>Página:</strong> ${block.child_page.title}</div>`;
+
+    case 'image':
+      return `<img src='${block.image}' class="h-20 w-20"/>`;
 
     default:
       return `<p class="text-red-500">[Bloque no soportado: ${block.type}]</p>`;
