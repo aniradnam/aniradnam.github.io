@@ -7,8 +7,20 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Anira</title>
 	</head>
-	<body>
-		<slot />
+	
+	<body class="bg-gradient-to-b from-red-950 via-red-800 to-red-500 min-h-screen text-white flex flex-col items-center justify-center">
+		<!-- Imagen centrada en el centro del layout -->
+		<div class="flex items-center justify-center w-full h-[70vh]">
+			<img
+				src="https://i.pinimg.com/736x/95/50/11/95501163a22dda9b829084a91996a2bc.jpg"
+				alt="Imagen central"
+				class="w-auto max-w-[80%] h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
+			/>
+		</div>
+		<!-- Contenido dinámico del slot -->
+		<main class="w-full mt-8 flex flex-col items-center justify-center">
+			<slot />
+		</main>
 	</body>
 </html>
 
